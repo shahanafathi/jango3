@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><b>Abstractuser</b></h2>
+    <form action="{% url 'abstr_reg' %}" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="name" name="name" >
+        <input type="text" placeholder="email" name="email" >
+        <input type="text" placeholder="usrname" name="username" >
+        <input type="password" placeholder="pswd" name="password" >
+        <input type="text" placeholder="age" name='age'>
+        <input type="text" placeholder="phone" name='phone'>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

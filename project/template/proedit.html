@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'proedit' %}" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="name" name="name" value="{{data1.first_name}}" >
+        <input type="text" placeholder="email" name="email" value="{{data1.email}}">
+        <input type="text" placeholder="usrname" name="username" value="{{data1.username}}" >
+        <input type="password" placeholder="pswd" name="password" value="{{data1.password}}">
+        <input type="text" placeholder="age" name='age'value="{{data1.age}}">
+        <input type="text" placeholder="phone" name='phone'value="{{data1.phone}}">
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
